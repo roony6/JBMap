@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TilesModified/JungleDirtTiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://LevelComplete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Floor.tscn" type="PackedScene" id=4]
+
+
+[node name="World3" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 196623, 0, 0, 196624, 2, 0, 262153, 0, 0, 262154, 2, 0, 262159, 5, 0, 262160, 3, 0, 327689, 6, 0, 327690, 8, 0, 327695, 5, 0, 327696, 3, 0, 393231, 5, 0, 393232, 3, 0, 458755, 0, 0, 458756, 2, 0, 458767, 5, 0, 458768, 3, 0, 524289, 0, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 2, 0, 524300, 0, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 2, 0, 589825, 5, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589832, 3, 0, 589836, 5, 0, 589837, 4, 0, 589838, 4, 0, 589839, 4, 0, 589840, 4, 0, 589841, 4, 0, 589842, 3, 0, 655361, 6, 0, 655362, 7, 0, 655363, 7, 0, 655364, 7, 0, 655365, 7, 0, 655366, 7, 0, 655367, 7, 0, 655368, 8, 0, 655372, 6, 0, 655373, 7, 0, 655374, 7, 0, 655375, 7, 0, 655376, 7, 0, 655377, 7, 0, 655378, 8, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 64, 224 )
+
+[node name="LevelComplete" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 576, 224 )
+WorldN = "res://World4.tscn"
+
+[node name="Floor" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 352, 480 )
+scale = Vector2( 24.5, 0.5 )
+WorldN = "res://World3.tscn"
+
+

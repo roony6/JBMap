@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://LevelComplete.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TilesModified/JungleTilesV2.tres" type="TileSet" id=3]
+[ext_resource path="res://Floor.tscn" type="PackedScene" id=4]
+
+
+[node name="World4" type="Node"]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 32, 0 )
+
+[node name="LevelComplete" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 608, 288 )
+WorldN = "res://World.tscn"
+
+[node name="TileMap" type="TileMap" parent="." index="2"]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 131072, 0, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 2, 0, 131080, 0, 0, 131081, 1, 0, 131082, 1, 0, 131083, 1, 0, 131084, 1, 0, 131085, 2, 0, 131089, 0, 0, 131090, 2, 0, 196608, 15, 0, 196609, 16, 0, 196610, 16, 0, 196611, 16, 0, 196612, 16, 0, 196613, 17, 0, 196616, 15, 0, 196617, 16, 0, 196618, 16, 0, 196619, 16, 0, 196620, 16, 0, 196621, 17, 0, 196625, 9, 0, 196626, 10, 0, 393220, 0, 0, 393221, 1, 0, 393222, 1, 0, 393223, 2, 0, 393226, 0, 0, 393227, 2, 0, 393230, 0, 0, 393231, 1, 0, 393232, 1, 0, 393233, 1, 0, 393234, 1, 0, 393235, 2, 0, 655364, 0, 0, 655365, 1, 0, 655366, 1, 0, 655367, 2, 0, 655370, 0, 0, 655371, 2, 0, 655374, 0, 0, 655375, 1, 0, 655376, 1, 0, 655377, 1, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 352, 448 )
+scale = Vector2( 24, 0.5 )
+WorldN = "res://World4.tscn"
+
+
