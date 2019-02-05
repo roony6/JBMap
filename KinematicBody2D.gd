@@ -4,7 +4,7 @@ const UPIS = Vector2(0, -1)
 var motion = Vector2()
 const GRAPHITY = 20
 const ACCELRATION = 55
-const MAX_SPEED = 220
+const MAX_SPEED = 275
 const JUMP_HIEGHT = -560
 var fraction = false
 

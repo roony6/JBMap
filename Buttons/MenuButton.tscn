@@ -2,8 +2,7 @@
 
 [ext_resource path="res://Fonts/dynamicfont_50.tres" type="DynamicFont" id=1]
 
-
-[node name="MenuButton" type="Button"]
+[node name="MenuButton" type="Button" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0

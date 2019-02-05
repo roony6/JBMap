@@ -39,10 +39,10 @@ animations = [ {
 [sub_resource type="CapsuleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 8.8
-height = 16.0
+radius = 15.1183
+height = 30.1874
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -55,7 +55,6 @@ __meta__ = {
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
-scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 1 )
 animation = "Idle"
 playing = true
