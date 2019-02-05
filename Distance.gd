@@ -3,7 +3,7 @@ extends Label
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-onready var player = get_parent().get_node("Player")
+onready var player = get_parent().get_parent().get_parent().get_parent().get_node("Player")
 onready var complete = get_parent().get_parent().get_parent().get_parent().get_node("LevelComplete")
 onready var o = get_parent().get_parent().get_parent().get_parent().get_node("Player")           
 
